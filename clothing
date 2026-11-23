@@ -1,0 +1,311 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MyClothing - Wear Your Style</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f3f6fc;
+    color: #10294c;
+}
+
+header {
+    background: #092c59;
+    color: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.logo span {
+    display: block;
+    font-size: 13px;
+    font-style: italic;
+    font-weight: normal;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #8fc5ff;
+}
+
+section {
+    display: none;
+    min-height: 80vh;
+    padding: 60px 8%;
+}
+
+section.active {
+    display: flex;
+}
+
+/* HOME PAGE */
+#home {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background:
+    linear-gradient(#092c59a8, #092c59a8),
+    linear-gradient(135deg, #263e5a, #9aabbc, #263e5a);
+}
+
+.hero h1 {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+
+button {
+    background: #092c59;
+    color: white;
+    border: none;
+    padding: 13px 25px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #1d5797;
+}
+
+/* ABOUT PAGE */
+#about {
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.about-image {
+    background: linear-gradient(135deg, #dce8f5, #a8bed6);
+    width: 280px;
+    height: 320px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 120px;
+}
+
+.about-content {
+    max-width: 500px;
+}
+
+.about-content h1 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.features {
+    display: flex;
+    gap: 25px;
+    margin-top: 25px;
+    text-align: center;
+}
+
+.features div {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    flex: 1;
+}
+
+.features h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+/* CONTACT PAGE */
+#contact {
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-box {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 550px;
+    box-shadow: 0 4px 15px #00000015;
+}
+
+.contact-box h1 {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.contact-box p {
+    margin: 18px 0;
+    font-size: 17px;
+}
+
+.contact-box a {
+    color: #10294c;
+    text-decoration: none;
+}
+
+footer {
+    background: #092c59;
+    color: white;
+    text-align: center;
+    padding: 18px;
+}
+
+@media(max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    nav a {
+        margin: 0 7px;
+        font-size: 14px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .features {
+        flex-direction: column;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        ♧ MyClothing
+        <span>Wear Your Style</span>
+    </div>
+
+    <nav>
+        <a href="#" onclick="showPage('home')">Home</a>
+        <a href="#" onclick="showPage('about')">About</a>
+        <a href="#" onclick="showPage('contact')">Contact</a>
+    </nav>
+</header>
+
+<!-- HOME PAGE -->
+<section id="home" class="active">
+    <div class="hero">
+        <h1>MyClothing</h1>
+        <p>Wear Your Style</p>
+        <button onclick="showPage('about')">
+            Explore More
+        </button>
+    </div>
+</section>
+
+<!-- ABOUT PAGE -->
+<section id="about">
+    <div class="about-image">
+        👕
+    </div>
+
+    <div class="about-content">
+        <h1>About MyClothing</h1>
+
+        <p>
+            We are a simple clothing brand that brings
+            stylish and comfortable outfits for everyone.
+            Our goal is to help people express themselves
+            through fashion.
+        </p>
+
+        <div class="features">
+            <div>
+                <h3>👕</h3>
+                <p>Trendy Styles</p>
+            </div>
+
+            <div>
+                <h3>💎</h3>
+                <p>Good Quality</p>
+            </div>
+
+            <div>
+                <h3>😊</h3>
+                <p>For Everyone</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT PAGE -->
+<section id="contact">
+    <div class="contact-box">
+        <h1>Contact Us</h1>
+        <p>Feel free to reach out to us!</p>
+
+        <p>📍 123 Fashion Street, Manila</p>
+
+        <p>✉️
+            <a href="mailto:myclothing@email.com">
+                myclothing@email.com
+            </a>
+        </p>
+
+        <p>📞
+            <a href="tel:+639123456789">
+                +63 912 345 6789
+            </a>
+        </p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 MyClothing | Wear Your Style</p>
+</footer>
+
+<script>
+function showPage(page) {
+    document.querySelectorAll("section").forEach(section => {
+        section.classList.remove("active");
+    });
+
+    document.getElementById(page).classList.add("active");
+
+    window.scrollTo(0, 0);
+}
+</script>
+
+</body>
+</html>
